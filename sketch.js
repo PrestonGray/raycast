@@ -1,7 +1,7 @@
 // Ray Casting
 
 let walls = [];
-let boxes = [];
+let squares = [];
 let circles = [];
 let particle;
 
@@ -16,6 +16,8 @@ function setup()
         let y2 = random(height);
         walls[i] = new Boundary(x1, y1, x2, y2);
     }
+    // circles.push(new Circle(width / 2, height / 2, width / 2));
+    // squares.push(new Square(width / 2, height / 2, width / 2));
     walls.push(new Boundary(0, 0, width, 0));
     walls.push(new Boundary(width, 0, width, height));
     walls.push(new Boundary(width, height, 0, height));
@@ -25,18 +27,18 @@ function setup()
 
 function draw()
 {
-    background(0);
+    background(50);
     for(let circle of circles)
     {
         circle.show();
     }
+    for(let square of squares)
+    {
+        square.show();
+    }
     for(let wall of walls)
     {
         wall.show();
-    }
-    for(let box of boxes)
-    {
-        box.show();
     }
     particle.update(mouseX, mouseY);
     particle.show();
