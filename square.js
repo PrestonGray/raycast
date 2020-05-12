@@ -10,7 +10,7 @@ class Square
     show()
     {
         stroke(0);
-        fill(0);
+        fill(0, 0);
         // Allows for drawing the square relative to the center instead of the corner
         square(this.center.x - (this.length / 2), this.center.y - (this.length / 2), this.length);
     }

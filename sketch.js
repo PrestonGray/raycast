@@ -8,7 +8,7 @@ let particle;
 function setup() 
 {
     createCanvas(500, 500);
-    // squares.push(new Square(width / 2, height / 2, width));
+    squares[0] = (new Square(width / 2, height / 2, width));
     // BEGIN Raycasting setup
     // for(let i = 0; i < 5; i++)
     // {
@@ -30,7 +30,7 @@ function setup()
         let ySquare = random(height);
         let size = random(width / 5);
         circles[i] = new Circle(xCircle, yCircle, radius);
-        squares[i] = new Square(xSquare, ySquare, size);
+        squares[i + 1] = new Square(xSquare, ySquare, size);
     }
     // END Raymarching setup
     particle = new Particle();

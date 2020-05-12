@@ -9,7 +9,7 @@ class Circle
     show()
     {
         stroke(0);
-        fill(0);
+        fill(0, 0);
         ellipse(this.center.x, this.center.y, this.radius * 2);
     }
 }

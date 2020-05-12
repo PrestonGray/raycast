@@ -43,21 +43,18 @@ class Particle
         for(let circle of circles)
         {
             const distToCircle = this.signedDistToCircle(circle);
-            distanceToScene = min(distToCircle, distanceToScene);
+            distanceToScene = min(abs(distToCircle), distanceToScene);
         }
 
         for(let square of squares)
         {
             const distToSquare = this.signedDistToSquare(square);
-            distanceToScene = min(distToSquare, distanceToScene);
+            distanceToScene = min(abs(distToSquare), distanceToScene);
         }
-        console.log(distanceToScene);
 
         stroke(255, 100);
         fill(0, 0);
         ellipse(this.pos.x, this.pos.y, distanceToScene * 2);
-
-        // return distanceToScene;
     }
 
     look(walls)
@@ -89,7 +86,7 @@ class Particle
     show()
     {
         fill(255);
-        ellipse(this.pos.x, this.pos.y, 8);
+        ellipse(this.pos.x, this.pos.y, 4);
         // for(let ray of this.rays)
         // {
         //     ray.show();
