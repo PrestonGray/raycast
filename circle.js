@@ -10,6 +10,6 @@ class Circle
     {
         stroke(0);
         fill(0);
-        ellipse(this.center.x, this.center.y, this.radius);
+        ellipse(this.center.x, this.center.y, this.radius * 2);
     }
 }
