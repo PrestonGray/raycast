@@ -21,19 +21,18 @@ function setup()
     // END Raycasting setup
 
     // BEGIN Raymarching setup
-    // for (let i = 0; i < 2; i ++)
-    // {
-    //     let xCircle = random(width);
-    //     let yCircle = random(height);
-    //     let radius = random(width / 5);
-    //     let xSquare = random(width);
-    //     let ySquare = random(height);
-    //     let size = random(width / 5);
-    //     circles[i] = new Circle(xCircle, yCircle, radius);
-    //     squares[i] = new Square(xSquare, ySquare, size);
-    // }
+    for (let i = 0; i < 2; i ++)
+    {
+        let xCircle = random(width);
+        let yCircle = random(height);
+        let radius = random(width / 5);
+        let xSquare = random(width);
+        let ySquare = random(height);
+        let size = random(width / 5);
+        circles[i] = new Circle(xCircle, yCircle, radius);
+        squares[i] = new Square(xSquare, ySquare, size);
+    }
     // END Raymarching setup
-    squares.push(new Square(width / 2, height / 2, width /2));
     particle = new Particle();
 }
 
