@@ -1,6 +1,8 @@
 // Ray Casting
 
 let walls = [];
+let boxes = [];
+let circles = [];
 let particle;
 
 function setup() 
@@ -24,9 +26,17 @@ function setup()
 function draw()
 {
     background(0);
+    for(let circle of circles)
+    {
+        circle.show();
+    }
     for(let wall of walls)
     {
         wall.show();
+    }
+    for(let box of boxes)
+    {
+        box.show();
     }
     particle.update(mouseX, mouseY);
     particle.show();
