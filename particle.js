@@ -54,8 +54,10 @@ class Particle
         console.log(distanceToScene);
 
         stroke(255, 100);
-        fill(0);
+        fill(0, 0);
         ellipse(this.pos.x, this.pos.y, distanceToScene * 2);
+
+        // return distanceToScene;
     }
 
     look(walls)
@@ -86,8 +88,8 @@ class Particle
 
     show()
     {
-        // fill(255);
-        // ellipse(this.pos.x, this.pos.y, 4);
+        fill(255);
+        ellipse(this.pos.x, this.pos.y, 8);
         // for(let ray of this.rays)
         // {
         //     ray.show();
